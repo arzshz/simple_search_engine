@@ -16,8 +16,32 @@ next_id = 1
 remove_stops = True
 
 STOPWORDS = {
-    "a", "an", "the", "is", "it", "in", "on", "at", "to", "for", "of", "and", "or", "not",
-    "this", "that", "was", "are", "be", "has", "had", "with", "as", "by", "from", "but",
+    "a",
+    "an",
+    "the",
+    "is",
+    "it",
+    "in",
+    "on",
+    "at",
+    "to",
+    "for",
+    "of",
+    "and",
+    "or",
+    "not",
+    "this",
+    "that",
+    "was",
+    "are",
+    "be",
+    "has",
+    "had",
+    "with",
+    "as",
+    "by",
+    "from",
+    "but",
 }
 
 
@@ -50,8 +74,8 @@ class Parser:
         return self.tokens[self.pos] if self.pos < len(self.tokens) else None
 
     def consume(self):
-        t = self.tokens[self.pos];
-        self.pos += 1;
+        t = self.tokens[self.pos]
+        self.pos += 1
         return t
 
     def parse(self) -> set[int]:
