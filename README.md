@@ -1,20 +1,33 @@
 # Simple Search Engine
 
-A small search engine project.
+A small FastAPI app for adding documents and running Boolean search queries.
 
-## What it does
-- indexes content
-- lets you search quickly
-- keeps the setup simple
+## Features
+- add documents through the web UI
+- search with `AND`, `OR`, `NOT`, and parentheses
+- toggle stop-word removal
+- keep everything in memory for simple testing
 
-## Getting started
-1. Clone the repository.
-2. Install the required dependencies.
-3. Run the app.
+## Run
+```bash
+uvicorn main:app --reload
+```
 
-## Usage
-Use the search interface or command-line entry point, depending on the project setup.
+Then open:
+- `http://127.0.0.1:8000`
+
+## Install
+```bash
+pip install -r requirements.txt
+```
+
+## API
+- `POST /api/add` — add a document
+- `GET /api/docs` — list documents
+- `POST /api/search` — search documents
+- `DELETE /api/docs` — clear documents
+- `PATCH /api/stops` — toggle stop-word removal
 
 ## Notes
-- Keep the data small for quick experiments.
-- This project is meant to stay lightweight and easy to understand.
+- The data stays in memory.
+- Restarting the app clears all documents.
