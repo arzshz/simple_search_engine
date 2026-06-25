@@ -1,0 +1,15 @@
+Query,Expected Documents
+python,"1,7"
+machine,"1,2,8"
+retrieval,"3,5,6"
+search,"4,7,8"
+python AND search,7
+machine AND learning,"1,2,8"
+information AND retrieval,"3,6"
+boolean AND retrieval,5
+python OR boolean,"1,5,7"
+search OR retrieval,"3,4,5,6,7,8"
+data OR machine,"1,2,6,8"
+python NOT search,1
+machine NOT python,"2,8"
+retrieval NOT boolean,"3,6"
